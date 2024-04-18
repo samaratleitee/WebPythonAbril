@@ -4,23 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            background-color:rgb(42, 164, 201);
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            color:rgb(130, 17, 145)
-        }
-    </style>
 </head>
 <body>
-    <p><h1> Cecília </h1></p>
-    <p><a href="https://www.youtube.com/shorts/usnODZcftqk">Youtube</a></p>
-    <p><img src = "static/Cecilia.jpg"></p>
+    {% for i in post %}
+    <h1> {{i.titulo}} </h1>
+    <h2> {{i.texto}} </h2>
+    <h3> {{i.data_criacao}} </h3>   
+    {% endfor %} 
 </body>
+
 </html>
